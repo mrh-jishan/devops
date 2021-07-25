@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+  labels:
+    stage: react-fe-dev-rs
+
+spec:
+  template:
+    metadata:
+      name: react-fe-dev-pod
+      labels:
+        stage: react-fe-dev
+    spec:
+      containers:
+        - name: nginx-pod
+          image: nginx
+
+  selector:
+    matchLabels:
+      stage: react-fe-dev
+  replicas: 4
+  

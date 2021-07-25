@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-img
+  labels:
+    run: nginx-img
+spec:
+  containers:
+  - image: nginx
+    name: nginx-img
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

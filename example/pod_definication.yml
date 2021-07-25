@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-app-react
+  labels:
+    app: web-app-fe
+    type: front-end
+
+spec:
+  containers:
+    - name: nginx-dev
+      image: nginx
+  
